@@ -46,7 +46,7 @@ endif
 
 # GAPPS
 ifeq ($(WITH_GMS),true)
-$(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
+$(call inherit-product, vendor/gms/products/gms.mk)
 PRODUCT_PACKAGES += OtaGapps
 else
 PRODUCT_PACKAGES += OtaVanila

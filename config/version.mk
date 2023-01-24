@@ -7,7 +7,11 @@ MATRIXX_VERSION := 10.4.3
 MATRIXX_BUILD_TYPE ?= Unofficial
 
 ifeq ($(WITH_GMS), true)
+ifeq ($(BUILD_CORE_GAPPS),true)
+  MATRIXX_BUILD_VARIANT := CoreGApps
+else
   MATRIXX_BUILD_VARIANT := Gapps
+endif
 else
   MATRIXX_BUILD_VARIANT := Vanilla
 endif
